@@ -1,0 +1,27 @@
+[project]
+name = "10-15-llm-abliteration"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "accelerate>=1.14.0",
+    "datasets>=2.0.0",
+    "transformer-lens<3.4.0",
+    "transformers>=4.30,<5",
+    "torch",
+    "torchvision",
+    "torchaudio",
+    "model2gguf>=1.0.0",
+    "tqdm>=4.68.2",
+]
+
+[[tool.uv.index]]
+name = "pytorch-cu124"
+url = "https://download.pytorch.org/whl/cu124"
+explicit = true
+
+[tool.uv.sources]
+torch = { index = "pytorch-cu124" }
+torchvision = { index = "pytorch-cu124" }
+torchaudio = { index = "pytorch-cu124" }
